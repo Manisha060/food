@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Foodie Food Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOGIN / REGISTER -->
+
+<div id="auth">
+
+    <h1>🍔 FOODIE</h1>
+
+    <!-- LOGIN -->
+
+    <div id="login">
+
+        <h2>Login</h2>
+
+        <input id="lemail" type="email" placeholder="Email">
+
+        <input id="lpass" type="password" placeholder="Password">
+
+        <button onclick="login()">LOGIN</button>
+
+        <p>
+            New User?
+            <a onclick="showRegister()">Register</a>
+        </p>
+
+    </div>
+
+
+    <!-- REGISTER -->
+
+    <div id="register">
+
+        <h2>Create Account</h2>
+
+        <input id="rname" placeholder="Name">
+
+        <input id="remail" type="email" placeholder="Email">
+
+        <input id="rpass" type="password" placeholder="Password">
+
+        <button onclick="register()">REGISTER</button>
+
+        <p>
+            Already have account?
+            <a onclick="showLogin()">Login</a>
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- FOOD APP -->
+
+<div id="app">
+
+<header>
+
+    <h1>🍔 FOODIE</h1>
+
+    <p>Delicious food at your doorstep</p>
+
+</header>
+
+
+<h2 class="heading">Choose Your Food 🍴</h2>
+
+
+<div class="foods">
+
+
+<!-- 1 Pizza -->
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38">
+
+<h3>Pizza</h3>
+
+<b>₹199</b>
+
+<button onclick="add('Pizza',199,this)">
+Add to Cart
+</button>
+
+<p class="count">Selected: 0</p>
+
+</div>
+
+
+<!-- 2 Burger -->
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd">
+
+<h3>Burger</h3>
+
+<b>₹149</b>
+
+<button onclick="add('Burger',149,this)">
+Add to Cart
+</button>
+
+<p class="count">Selected: 0</p>
+
+</div>
+
+
+<!-- 3 Biryani -->
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0">
+
+<h3>Biryani</h3>
+
+<b>₹220</b>
+
+<button onclick="add('Biryani',220,this)">
+Add to Cart
+</button>
+
+<p class="count">Selected: 0</p>
+
+</div>
+
+
+<!-- 4 Noodles -->
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624">
+
+<h3>Noodles</h3>
+
+<b>₹160</b>
+
+<button onclick="add('Noodles',160,this)">
+Add to Cart
+</button>
+
+<p class="count">Selected: 0</p>
+
+</div>
+
+
+<!-- 5 Pasta -->
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601">
+
+<h3>Pasta</h3>
+
+<b>₹180</b>
+
+<button onclick="add('Pasta',180,this)">
+Add to Cart
+</button>
+
+<p class="count">Selected: 0</p>
+
+</div>
+
+
+<!-- 6 Samosa -->
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
+
+<h3>Samosa</h3>
+
+<b>₹60</b>
+
+<button onclick="add('Samosa',60,this)">
+Add to Cart
+</button>
+
+<p class="count">Selected: 0</p>
+
+</div>
+
+
+<!-- 7 Fried Rice -->
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b">
+
+<h3>Fried Rice</h3>
+
+<b>₹170</b>
+
+<button onclick="add('Fried Rice',170,this)">
+Add to Cart
+</button>
+
+<p class="count">Selected: 0</p>
+
+</div>
+
+
+<!-- 8 Paneer -->
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe">
+
+<h3>Paneer</h3>
+
+<b>₹190</b>
+
+<button onclick="add('Paneer',190,this)">
+Add to Cart
+</button>
+
+<p class="count">Selected: 0</p>
+
+</div>
+
+
+<!-- 9 Meals -->
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f">
+
+<h3>Meals</h3>
+
+<b>₹150</b>
+
+<button onclick="add('Meals',150,this)">
+Add to Cart
+</button>
+
+<p class="count">Selected: 0</p>
+
+</div>
+
+
+<!-- 10 Donut -->
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1551024506-0bccd828d307">
+
+<h3>Donut</h3>
+
+<b>₹70</b>
+
+<button onclick="add('Donut',70,this)">
+Add to Cart
+</button>
+
+<p class="count">Selected: 0</p>
+
+</div>
+
+
+<!-- 11 Cake -->
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587">
+
+<h3>Cake</h3>
+
+<b>₹180</b>
+
+<button onclick="add('Cake',180,this)">
+Add to Cart
+</button>
+
+<p class="count">Selected: 0</p>
+
+</div>
+
+
+<!-- 12 Salad -->
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe">
+
+<h3>Salad</h3>
+
+<b>₹110</b>
+
+<button onclick="add('Salad',110,this)">
+Add to Cart
+</button>
+
+<p class="count">Selected: 0</p>
+
+</div>
+
+
+<!-- 13 Soup -->
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141">
+
+<h3>Soup</h3>
+
+<b>₹100</b>
+
+<button onclick="add('Soup',100,this)">
+Add to Cart
+</button>
+
+<p class="count">Selected: 0</p>
+
+</div>
+
+
+<!-- 14 Chicken Curry -->
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398">
+
+<h3>Chicken Curry</h3>
+
+<b>₹230</b>
+
+<button onclick="add('Chicken Curry',230,this)">
+Add to Cart
+</button>
+
+<p class="count">Selected: 0</p>
+
+</div>
+
+
+<!-- 15 Chapathi -->
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8">
+
+<h3>Chapathi</h3>
+
+<b>₹90</b>
+
+<button onclick="add('Chapathi',90,this)">
+Add to Cart
+</button>
+
+<p class="count">Selected: 0</p>
+
+</div>
+
+
+<!-- 16 Cheese Burger -->
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+
+<h3>Cheese Burger</h3>
+
+<b>₹180</b>
+
+<button onclick="add('Cheese Burger',180,this)">
+Add to Cart
+</button>
+
+<p class="count">Selected: 0</p>
+
+</div>
+
+
+<!-- 17 Idli -->
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1593560708920-61dd98c8a2b2">
+
+<h3>Idli</h3>
+
+<b>₹60</b>
+
+<button onclick="add('Idli',60,this)">
+Add to Cart
+</button>
+
+<p class="count">Selected: 0</p>
+
+</div>
+
+
+<!-- 18 Dosa -->
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7">
+
+<h3>Dosa</h3>
+
+<b>₹80</b>
+
+<button onclick="add('Dosa',80,this)">
+Add to Cart
+</button>
+
+<p class="count">Selected: 0</p>
+
+</div>
+
+
+<!-- 19 Chicken -->
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1">
+
+<h3>Chicken</h3>
+
+<b>₹249</b>
+
+<button onclick="add('Chicken',249,this)">
+Add to Cart
+</button>
+
+<p class="count">Selected: 0</p>
+
+</div>
+
+
+<!-- 20 Chocolate Cake -->
+
+<div class="food">
+
+<img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187">
+
+<h3>Chocolate Cake</h3>
+
+<b>₹180</b>
+
+<button onclick="add('Chocolate Cake',180,this)">
+Add to Cart
+</button>
+
+<p class="count">Selected: 0</p>
+
+</div>
+
+</div>
+
+
+<!-- CART -->
+
+<div class="cart">
+
+<h2>🛒 Your Cart</h2>
+
+<div id="cart">
+
+<p>No items selected</p>
+
+</div>
+
+<h2>Total: ₹<span id="total">0</span></h2>
+
+
+<!-- DELIVERY -->
+
+<h2>📍 Delivery Details</h2>
+
+<input id="customerName" placeholder="Your Name">
+
+<input id="phone" placeholder="Phone Number">
+
+<textarea id="address"
+placeholder="Full Delivery Address"></textarea>
+
+
+<!-- PAYMENT -->
+
+<h2>💳 Payment Method</h2>
+
+<select id="payment">
+
+<option value="">Select Payment</option>
+
+<option>UPI</option>
+
+<option>Credit / Debit Card</option>
+
+<option>Cash on Delivery</option>
+
+</select>
+
+<br>
+
+<button class="orderBtn" onclick="placeOrder()">
+PLACE ORDER
+</button>
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
